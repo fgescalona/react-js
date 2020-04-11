@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import loading from '../images/loading.svg';
+import './styles/Loader.css';
 
-class Loader extends React.Component {
-
-    render() {
-        return (
-            <img src={loading} alt="Loading"/>
-        );
-    }
+export default class Loader extends Component {
+  render() {
+    return (
+      <div className="lds-grid">
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
+    );
+  }
 }
-
-export default Loader;

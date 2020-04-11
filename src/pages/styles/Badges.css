@@ -28,3 +28,14 @@
   justify-content: flex-end;
   margin-bottom: 1rem;
 }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.flex-center img {
+  width: 100px;
+}
