@@ -4,62 +4,66 @@ import { Link } from 'react-router-dom';
 import './styles/Badges.css'
 import confLogo from '../images/badge-header.svg';
 import BadgesList from '../components/BadgesList';
+import Loader from '../components/Loader';
 
 class Badges extends React.Component {
 
-    
-
-    constructor(props) {
+    /* constructor(props) {
         super(props);
         console.log('constructor');
         
         this.state = {
             data: []
         };
+    } */
+
+    //Inicializamos el estado vacío
+    state = {
+        nextPage: 1,
+        loading: true,
+        error: null,
+        data: {
+            results: []
+        }
     }
 
     componentDidMount() {
-        console.log('componentDidMount');
-
-        this.timeoutId = setTimeout(() => {
-            this.setState({
-                data: [
-                    {
-                      id: '2de30c42-9deb-40fc-a41f-05e62b5939a7',
-                      firstName: 'Freda',
-                      lastName: 'Grady',
-                      email: 'Leann_Berge@gmail.com',
-                      jobTitle: 'LegacyBrandDirector',
-                      twitter: 'FredaGrady22221-7573',
-                      avatarUrl:
-                        'https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon',
-                    },
-                    {
-                      id: 'd00d3614-101a-44ca-b6c2-0be075aeed3d',
-                      firstName: 'Major',
-                      lastName: 'Rodriguez',
-                      email: 'Ilene66@hotmail.com',
-                      jobTitle: 'HumanResearchArchitect',
-                      twitter: 'MajorRodriguez61545',
-                      avatarUrl:
-                        'https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon',
-                    },
-                    {
-                      id: '63c03386-33a2-4512-9ac1-354ad7bec5e9',
-                      firstName: 'Daphney',
-                      lastName: 'Torphy',
-                      email: 'Ron61@hotmail.com',
-                      jobTitle: 'NationalMarketsOfficer',
-                      twitter: 'DaphneyTorphy96105',
-                      avatarUrl:
-                        'https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon',
-                    }
-                ]
-            })
-        }, 3000);
+        this.fetchCharacters();
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    fetchCharacters = async () => {
+        this.setState({
+            loading: true,
+            error: null
+        });
+
+        try {
+            //Recibimos la respuesta de la API
+            const response = await fetch(`https://rickandmortyapi.com/api/character?page=${this.state.nextPage}`);
+            //Le sacamos los datos a la respuesta
+            const data = await response.json();
+            //Guardamos esos datos con setState()
+            this.setState({
+                loading: false,
+                data: {
+                    info: data.info,
+                    results: [].concat(
+                        this.state.data.results,
+                        data.results
+                    )
+                },
+                nextPage: this.state.nextPage + 1
+            });
+        } catch (error) {
+            this.setState({
+                loading: false,
+                error: error
+            });
+        }
+        
+    }
+
+    /* componentDidUpdate(prevProps, prevState) {
         console.log('componentDidUpdate');
 
         console.log({
@@ -71,15 +75,18 @@ class Badges extends React.Component {
             props: this.props,
             state:this.state
         });
-    }
+    } */
 
-    componentWillUnmount() {
+    /* componentWillUnmount() {
         console.log('componentWillUnmount');
         clearTimeout(this.timeoutId);
-    }
+    } */
 
     render() {
-        console.log('render');
+        
+        if (this.state.error) {
+            return `Error: ${this.state.error.message}`;
+        }
         return (
             <React.Fragment>
                 <div className="Badges">
@@ -97,7 +104,18 @@ class Badges extends React.Component {
                             <div className="Badges__buttons">
                                 <Link to="/badges/new" className="btn btn-primary"> New Badge </Link>
                             </div>
-                            <BadgesList badges={this.state.data} />
+                            <BadgesList badges={this.state.data.results} />
+
+                            {this.state.loading && (
+                                <div className="loader">
+                                    <Loader />
+                                </div>
+                            )}
+
+                            {!this.state.loading && (
+                                <button onClick={() => this.fetchCharacters()} className="btn btn-primary">Load More</button>
+                            )}
+
                         </div>
                     </div>
                 </div>
