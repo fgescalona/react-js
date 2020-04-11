@@ -440,6 +440,42 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Luis",
+      "lastName": "Pérez",
+      "email": "lperez@gmail.com",
+      "jobTitle": "Front End Engineer",
+      "twitter": "lperez",
+      "avatarUrl": "https://www.gravatar.com/avatar/8d948aa8aa19151acc403c3f616515fa?d=identicon",
+      "id": "vg2Jsay"
+    },
+    {
+      "firstName": "Camilo",
+      "lastName": "Ortiz",
+      "email": "cortiz@gmail.com",
+      "jobTitle": "PHP Developer",
+      "twitter": "cortiz",
+      "avatarUrl": "https://www.gravatar.com/avatar/6cc1168ef4c5748a717bc20bf9d9a27f?d=identicon",
+      "id": "WbicMIt"
+    },
+    {
+      "firstName": "Juan",
+      "lastName": "Acevedo",
+      "email": "jacevedo@gmail.com",
+      "jobTitle": "Civil Engineer",
+      "twitter": "jacevedo",
+      "avatarUrl": "https://www.gravatar.com/avatar/2994e27c4d1ff78c847bbe816e5d25b9?d=identicon",
+      "id": "lcdri-q"
+    },
+    {
+      "firstName": "Sandra",
+      "lastName": "Pérez",
+      "email": "sperez@gmail.com",
+      "jobTitle": "Comercial Manager",
+      "twitter": "sperez",
+      "avatarUrl": "https://www.gravatar.com/avatar/764e15eb2748b51985a0a19e398c5d89?d=identicon",
+      "id": "5Jaanuh"
     }
   ]
 }
