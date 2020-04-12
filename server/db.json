@@ -7,16 +7,7 @@
       "email": "fescalonamolina@gmail.com",
       "jobTitle": "Software Engineer",
       "twitter": "escalonafides",
-      "avatarUrl": "https://avatars2.githubusercontent.com/u/8376162?s=100"
-    },
-    {
-      "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
-      "firstName": "Major",
-      "lastName": "Rodriguez",
-      "email": "Ilene66@hotmail.com",
-      "jobTitle": "Human Research Architect",
-      "twitter": "MajorRodriguez61545",
-      "avatarUrl": "https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon"
+      "avatarUrl": "https://www.gravatar.com/avatar/ab26353c9c99ba06add549fe9d1734b4?d=identicon"
     },
     {
       "id": "63c03386-33a2-4512-9ac1-354ad7bec5e9",
@@ -476,6 +467,15 @@
       "twitter": "sperez",
       "avatarUrl": "https://www.gravatar.com/avatar/764e15eb2748b51985a0a19e398c5d89?d=identicon",
       "id": "5Jaanuh"
+    },
+    {
+      "firstName": "Gerardo",
+      "lastName": "Escalona",
+      "email": "fescalonamolina@gmail.com",
+      "jobTitle": "Software Engineer",
+      "twitter": "escalonafides",
+      "avatarUrl": "https://www.gravatar.com/avatar/ab26353c9c99ba06add549fe9d1734b4?d=identicon",
+      "id": "-5-WMuH"
     }
   ]
 }
