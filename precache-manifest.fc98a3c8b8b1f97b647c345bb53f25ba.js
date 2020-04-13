@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-js/static/media/platziconf-logo.f246f5f1.svg"
   },
   {
-    "revision": "674dfcdd4b8fe67deeef",
+    "revision": "4cb392830847bad0ed48",
     "url": "/react-js/static/css/main.5fddd905.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/react-js/static/js/2.f44ed3fa.chunk.js"
   },
   {
-    "revision": "674dfcdd4b8fe67deeef",
-    "url": "/react-js/static/js/main.674dfcdd.chunk.js"
+    "revision": "4cb392830847bad0ed48",
+    "url": "/react-js/static/js/main.4cb39283.chunk.js"
   },
   {
     "revision": "973f5842f0c37eacb2eb491c62fc0032",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/react-js/static/css/2.5ecb8115.chunk.css"
   },
   {
-    "revision": "36abb9fb3848f84ba1f59cf4b12fad31",
+    "revision": "ba079fed59d0d6a4f8bfe8b6f4925b54",
     "url": "/react-js/index.html"
   }
 ];
